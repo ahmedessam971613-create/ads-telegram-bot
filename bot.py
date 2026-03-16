@@ -50,7 +50,7 @@ def balance(message):
 
 @bot.message_handler(func=lambda m: m.text == "👥 دعوة الأصدقاء")
 def refer(message):
-link = f"https://t.me/ads_telegram_bot?start={message.from_user.id}""
+link = f"https://t.me/ads_telegram_bot?start={message.from_user.id}"
     bot.send_message(message.chat.id,
                      f"رابط الدعوة الخاص بك:\n{link}\n\nكل صديق = 10 نقاط")
 
