@@ -42,7 +42,7 @@ def ads(message):
 
     bot.send_message(
         message.chat.id,
-        f"📢 إعلان\n\n{ads_text}\n\nبعد        f"💰 طلب سحب جديد\n\nUser ID: {user_id}\nWallet: {wallet}"
+        f"📢 إعلان\n\n{ads_text}\n\nبعد        f" طلب سحب جديد\n\nUser ID: {user_id}\nWallet: {wallet}"
     )
 
 
