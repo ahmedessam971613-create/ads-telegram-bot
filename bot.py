@@ -40,8 +40,8 @@ def start(message):
 @bot.message_handler(func=lambda m: m.text == "📺 مشاهدة إعلان")
 def ads(message):
 
-    bot.send_message(
-        message.chat.id,
+users[user_id] += 5
+bot.send_message(message.chat.id, "تم إضافة 5 نقاط" 
         f"📢 إعلان\n\n{ads_text}\n\nبعد        f" طلب سحب جديد\n\nUser ID: {user_id}\nWallet: {wallet}"
     )
 
