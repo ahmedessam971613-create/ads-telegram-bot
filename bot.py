@@ -37,12 +37,27 @@ def start(message):
     )
 
 
-bot.send_message(message.chat.id, f"📢 إعلان\n\n{ads_text}\n\nاكتب /done بعد المشاهدة")
+@bot.message_handler(func=lambda m: m.text == "📺 مشاهدة إعلان")
+def ads(message):
 
-users[user_id] += 5
-bot.send_message(message.chat.id, "تم إضافة 5 نقاط" 
-        f"📢 إعلان\n\n{ads_text}\n\nبعد        f" طلب سحب جديد\n\nUser ID: {user_id}\nWallet: {wallet}"
+    user_id = message.from_user.id
+
+    if user_id not in users:
+        users[user_id] = 0
+
+    bot.send_message(
+        message.chat.id,
+        f"📢 إعلان\n\n{ads_text}\n\nبعد المشاهدة اكتب /done"
     )
+
+
+@bot.message_handler(commands=['done'])
+def done(message):
+
+    user_id = message.from_user.id
+    users[user_id] += 5
+
+    bot.send_message(message.chat.id, "تم إضافة 5 نقاط")
 
 
 print("Bot is running...")
