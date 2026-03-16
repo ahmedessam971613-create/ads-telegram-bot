@@ -37,8 +37,7 @@ def start(message):
     )
 
 
-@bot.message_handler(func=lambda m: m.text == "📺 مشاهدة إعلان")
-def ads(message):
+bot.send_message(message.chat.id, f"📢 إعلان\n\n{ads_text}\n\nاكتب /done بعد المشاهدة")
 
 users[user_id] += 5
 bot.send_message(message.chat.id, "تم إضافة 5 نقاط" 
