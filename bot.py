@@ -7,7 +7,7 @@ bot = telebot.TeleBot(TOKEN)
 
 BOT_USERNAME = "EarnnAds_bot"
 
-ADMIN_ID = 123456789
+ADMIN_ID = 1541770886
 
 users = {}
 ads_text = "https://example.com"
